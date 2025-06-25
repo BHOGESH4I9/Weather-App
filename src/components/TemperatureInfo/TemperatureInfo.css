@@ -1,0 +1,30 @@
+.temperature-info {
+  margin: 0.5rem 0; /* Reduced margin for embedding */
+}
+
+.temperature-info .fs-5 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: var(--text-color); /* #DFD0B8 or #222831 */
+}
+
+.temperature-info .btn-weather-toggle {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: var(--accent); /* #948979 */
+  color: var(--light); /* #DFD0B8 */
+  border: 1px solid var(--border-color); /* #948979 */
+  border-radius: 0.3rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.temperature-info .btn-weather-toggle:hover {
+  background-color: #7a6f61; /* Darker accent */
+  transform: translateY(-1px);
+}
+
+.temperature-info .btn-weather-toggle:focus {
+  outline: 4px auto var(--accent);
+  box-shadow: 0 0 8px rgba(148, 137, 121, 0.5);
+}

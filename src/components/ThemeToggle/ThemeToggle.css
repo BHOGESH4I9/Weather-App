@@ -1,0 +1,12 @@
+.theme-toggle {
+  background-color: var(--accent);
+  color: var(--light);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.theme-toggle:hover {
+  background-color: #7a6f61; /* Darker shade of accent */
+}

@@ -1,0 +1,107 @@
+.forecast-day-list {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.04);
+  max-width: 1200px;
+  text-align: center;
+}
+
+.forecast-day-list h5 {
+  margin-bottom: 1.5rem;
+}
+
+/* Container to center and wrap cards with equal spacing */
+.forecast-day-list .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Forecast cards */
+.forecast-card {
+  flex: 1 1 45%;
+  max-width: 480px;
+  min-width: 280px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.forecast-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: calc(33.333% - 2rem);
+  min-width: 250px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tablets - 2 cards per row */
+@media (max-width: 1024px) {
+  .forecast-card {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+  }
+}
+
+/* Mobile - 1 card per row */
+@media (max-width: 600px) {
+  .forecast-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* Toggle Buttons */
+.forecast-day-list button,
+.btn-forecast-toggle {
+  background-color: var(--accent);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.forecast-day-list button:hover,
+.btn-forecast-toggle:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .forecast-card {
+    flex: 1 1 100%; /* Full width on mobile */
+  }
+}
+
+
+body.dark .forecast-day-list button,
+body.dark .btn-forecast-toggle {
+  border: solid black 1px;
+  color: #000000;
+} 

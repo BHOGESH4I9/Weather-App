@@ -1,0 +1,71 @@
+:root {
+  --primary-bg: #000000;
+  --secondary-bg: #121212;
+  --accent: #ffffff;
+  --light: #ffffff;
+  --text-color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.2);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animate background gradient */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  /* background: linear-gradient(-45deg, #639bd7, #74b2e2, #94B4C1, #487db5); */
+  /* background: linear-gradient(-45deg, #0F2027, #203A43, #2C5364); */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+
+  background-size: 600% 600%;
+  animation: gradientFlow 15s ease infinite;
+  transition: background-color 0.3s ease;
+}
+
+/* Gradient animation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Button */
+button {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--accent);
+  color: var(--light);
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+button:hover {
+  background-color: #7a9bad;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--accent);
+}
+

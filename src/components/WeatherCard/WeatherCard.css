@@ -1,0 +1,41 @@
+/* Default (dark mode) */
+.weather-card {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  
+}
+
+.card-date{
+  color: #000;
+}
+
+
+/* Apply white background and black text when light mode is active */
+body.light .weather-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+body.light .weather-card  {
+    color: #000000;
+}
+
+body.dark .weather-card .card-date {
+  color: white;
+}
+
+body.dark .weather-card  {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
